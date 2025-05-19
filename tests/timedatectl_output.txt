@@ -1,0 +1,7 @@
+               Local time: Mon 2025-05-19 16:01:35 EEST
+           Universal time: Mon 2025-05-19 13:01:35 UTC
+                 RTC time: Mon 2025-05-19 13:01:35
+                Time zone: Europe/Kiev (EEST, +0300)
+System clock synchronized: yes
+              NTP service: n/a
+          RTC in local TZ: no
