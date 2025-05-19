@@ -109,20 +109,26 @@ class TimeDateInfo:
                     result_dict['timezone'] = tz_name
             elif kind == 'LOCAL_TIME':
                 local_time = mo.group('TZ_LOCAL_TIME')
+                local_time = local_time.strip()
                 result_dict['local_time'] = datetime.strptime(local_time, '%a %Y-%m-%d %H:%M:%S %Z').strftime('%Y-%m-%d %H:%M:%S')
             elif kind == 'UNIVERSAL_TIME':
                 universal_time = mo.group('TZ_UNIVERSAL_TIME')
+                universal_time = universal_time.strip()
                 result_dict['universal_time'] = datetime.strptime(universal_time, '%a %Y-%m-%d %H:%M:%S %Z').strftime('%Y-%m-%d %H:%M:%S')
             elif kind == 'RTC_TIME':
                 rtc_time = mo.group('TZ_RTC_TIME')
+                rtc_time = rtc_time.strip()
                 result_dict['rtc_time'] = datetime.strptime(rtc_time, '%a %Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d %H:%M:%S')
             elif kind == 'SYSTEM_CLOCK_SYNC':
                 sync_status = mo.group('TZ_SYSTEM_CLOCK_SYNC')
+                sync_status = sync_status.strip()
                 result_dict['system_clock_sync'] = sync_status
             elif kind == 'NTP_SERVICE':
                 ntp_service = mo.group('TZ_NTP_SERVICE')
+                ntp_service = ntp_service.strip()
                 result_dict['ntp_service'] = ntp_service
             elif kind == 'RTC_LOCAL':
                 rtc_local_tz = mo.group('TZ_RTC_LOCAL')
+                rtc_local_tz = rtc_local_tz.strip()
                 result_dict['rtc_local_tz'] = rtc_local_tz
         return result_dict
